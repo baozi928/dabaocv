@@ -1,0 +1,381 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>在线简历</title>
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_908787_kekc8lrkg7e.css">
+    <style>
+        /*css reset*/
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        /*common css  */
+        .pill {
+            background: #000;
+            color: #fff;
+            display: inline-block;
+            font-size: 14px;
+            width: 140px;
+            line-height: 20px;
+            text-align: center;
+            border-radius: 20px;;
+        }
+
+        .layout {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .clearfix::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        /* page css*/
+        body {
+            font: 16px/1.5 SimSun, STKaiti, "Microsoft YaHei", SimHei, Helvetica, Arial;
+            color: #333;
+        }
+
+        .wrapper {
+            background-color: #ececec;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            padding-top: 40px;
+        }
+
+        .aside {
+            float: left;
+            width: 280px;
+        }
+
+        .aside .user {
+            text-align: center;
+            padding-bottom: 20px;
+        }
+
+        .aside .user h1{
+            font-size: 40px;
+        }
+
+        .aside .user h1::after {
+            content: '';
+            display: block;
+            width: 60px;
+            border-top: 1px solid #d6d6d6;
+            margin: 16px auto;
+        }
+
+        .aside .user::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 0;
+            margin-top: 20px;
+            border-top: 20px solid #d6d6d6;
+            border-bottom: 20px solid transparent;
+            border-right: 140px solid #d6d6d6;
+            border-left: 140px solid transparent;
+        }
+
+        .aside .contact {
+            padding: 20px;
+        }
+
+        .aside .contact li {
+            border-bottom: 1px solid #d6d6d6;
+            list-style: none;
+            line-height: 40px;
+        }
+
+        .aside .contact .iconfont {
+            border-right: 1px solid #d6d6d6;
+            padding-right: 10px;
+            margin-right: 10px;
+            padding-left: 10px;
+            display: inline-block;
+            font-size: 20px;
+            color: #7bbaaa;
+        }
+
+        .aside .skills {
+            background: #7bbaaa;
+            padding: 20px;
+            color: #fff;
+        }
+
+        .aside .skills dt {
+            color: #eee;
+            margin-top: 20px;
+        }
+
+        .aside .skills dd {
+            height: 4px;
+            background: #74c5b5;
+            border-radius: 2px;
+            margin-top: 10px;
+        }
+
+        .aside .skills .mastery {
+            height: 4px;
+            background: #fff;
+            display: block;
+            border-radius: 2px;
+        }
+
+        .aside .others h2 {
+            margin: 20px 0 0 20px;
+        }
+
+        .main {
+            margin-left: 280px;
+            background: #fff;
+            padding: 40px;
+            margin-right: 20px;
+        }
+
+        .main .intro {
+            overflow: auto;
+        }
+        .main .intro img {
+            width: 80px;
+            height: 80px;
+            float: left;
+        }
+
+        .main .intro p {
+            margin-left: 120px;
+        }
+
+        .section {
+        }
+
+        .section .pill {
+            float: left;
+            margin-top: 5px;
+        }
+
+        .section h2{
+            font-size: 35px;
+            color: #d9d9d9;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .section .more {
+            margin-left: 150px;
+            border-left: 1px solid #eee;
+        }
+        .section h3 {
+            color: #666;
+            font-size: 20px;
+            font-weight: normal;
+        }
+        .section h3 strong{
+            color: #111;
+            font-weight: bold;
+        }
+
+        .section h3::before {
+            content: '';
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            border-radius: 6px;
+            border: 2px solid #7bbaaa;
+            margin-right: 20px;
+            position: relative;
+            left: -5px;
+        }
+
+        .section h4 {
+            color: #111;
+            margin-top: 20px;
+            margin-left: 40px;
+        }
+
+
+        .section .more ul {
+            margin-left: 50px;
+            padding-bottom: 20px;
+        }
+        .section .more li {
+            color: #666;
+            font-size: 14px;
+        }
+
+
+        @media print {
+            .aside {
+                width: 200px;
+            }
+            .main {
+                margin-left: 200px;
+            }
+            .aside .user::after {
+                border-right-width: 100px;
+                border-left-width: 100px;
+            }
+            .pill {
+                display: none;
+            }
+
+            .section .more {
+                margin-left: 20px;
+            }
+
+            .wrapper {
+                margin: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper layout clearfix">
+    <div class="aside">
+        <div class="user">
+            <div class="intro clearfix">
+                <img src="https://via.placeholder.com/80.png" alt="">
+                <h1>谢大宝</h1>
+            </div>
+            <p>应聘岗位：前端工程师</p>
+        </div>
+        <ul class="contact">
+            <li><span class="iconfont icon-email"></span> 1008611@qq.com</li>
+            <li><span class="iconfont icon-phone"></span> 1008611</li>
+            <li><span class="iconfont icon-education"></span> 本科</li>
+        </ul>
+
+        <div class="others">
+            <h2>其他</h2>
+            <ul class="contact">
+                <li><span class="iconfont icon-github"></span> <a href="https://jirengu.com">Github</a></li>
+                <li><span class="iconfont icon-blog"></span> <a href="https://jirengu.com">博客</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="main">
+            <div class="projects section">
+                <h2>项目经历</h2>
+                <div class="item">
+                    <div class="left pill">08/202 - 09/2022</div>
+                    <div class="more">
+                        <h3>vue技术栈记账应用</h3>
+                        <ul>
+                            <li><strong>项目介绍：</strong> 这是一个基于Vue2 /Typescript/ Webpack 构建的单页面记账应用，使用了Vuex和VueRouter。
+                                此应用主要应用于手机页面，用户可以用它进行收支记账，能够添加、编辑、删除标签，可以给每一笔账写备注，能够根据日期来显示记账内容。用户记录的各项数据，标签、备注、收支金额、记账时间等均采用本地存储的方式。
+                                此应用有三个页面，分别是：记录收支、编辑标签和查看记账历史，可以通过点击底部导航栏的图标进行切换。
+                                页面的切换是通过VueRouter来完成，用户的数据由Vuex管理。</li>
+                            <li><strong>技术栈：</strong>Vue2 Typescript Webpack </li>
+                            <li><strong>项目源码:</strong><a href="https://github.com/baozi928/sanye" target="_blank">点击查看</a></li>
+                            <li><strong>预览项目:</strong><a href="https://baozi928.github.io/sanye-website/#/" target="_blank">点击查看</a></li>
+                        </ul>
+
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="left pill">09/2022 - 9/2022</div>
+                    <div class="more">
+                        <h3>在线云笔记</h3>
+                        <ul>
+                            <li><strong>项目介绍：</strong> 这是一个基于Vue2 /Typescript/ Webpack 构建的线上笔记应用，使用了Vuex和VueRouter。主要应用于PC端，用户可以注册、登录，在不同的PC端登录查看笔记。可以根据自己的需求创建不同的笔记本，修改笔记本标题，创建笔记、编辑笔记、删除笔记，还可以把笔记转换为Markdown格式。删除笔记后，笔记会出现在回收站，可以选择彻底删除或者恢复笔记。</li>
+                            <li><strong>技术栈：</strong>Vue、VueRouter、Vuex、element-ui、webpack、ES6</li>
+                            <li><strong>项目源码:</strong><a href="https://github.com/baozi928/cmnote" target="_blank">点击查看</a></li>
+                            <li><strong>预览项目:</strong><a href="https://baozi928.github.io/cmnote-website/" target="_blank">点击查看</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="left pill">08/2022 - 09/2022</div>
+                    <div class="more">
+                        <h3>一款简易vue ui组件库</h3>
+                        <ul>
+                            <li><strong>项目介绍：</strong> 这个UI组件库是基于 Vue 3 和 TypeScript搭建的。使用了VueRouter实现页面跳转。主要分为文档和组件列表模块。文档列表对UI组件库进行了简单介绍，组件列表有四个常用组件，Switch、Button、Dialog和Tabs组件。用户可以根据自己的需求，用npm下载后使用。
+                            </li>
+                            <li><strong>技术栈：</strong>vue、vue-router、vuex、webpack、es6</li>
+                            <li><strong>项目源码:</strong><a href="https://github.com/baozi928/lulu-UI" target="_blank">点击查看</a></li>
+                            <li><strong>预览项目:</strong><a href="https://baozi928.github.io/lulu-UI-website/" target="_blank">点击查看</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        <div class="projects section">
+            <h2>开源项目</h2>
+            <div class="item">
+                <div class="left pill">09/2022 - 9/2022</div>
+                <div class="more">
+                    <h3>基于Jquery的简单导航网站</h3>
+                    <ul>
+                        <li><strong>项目介绍：</strong>这是根据自己平时的上网需求定制的一个极简导航网站，可以一键进入常用网站。</li>
+                        <li><strong>技术栈：</strong>JQuery JavaScript</li>
+                        <li><strong>项目源码:</strong><a href="https://github.com/baozi928/nav-1" target="_blank">点击查看</a></li>
+                        <li><strong>预览项目:</strong><a href="https://baozi928.github.io/nav-1/src/index.html" target="_blank">点击查看</a></li>
+                    </ul>
+                </div>
+                <div class="left pill">09/2022 - 9/2022</div>
+                <div class="more">
+                    <h3>Canvas简易画板</h3>
+                    <ul>
+                        <li><strong>项目介绍：</strong>学习JS时制作的简易画板，可以流畅地书写。</li>
+                        <li><strong>技术栈：</strong>JavaScript</li>
+                        <li><strong>项目源码:</strong><a href="https://github.com/baozi928/nav-1" target="_blank">点击查看</a></li>
+                        <li><strong>预览项目:</strong><a href="https://baozi928.github.io/nav-1/src/index.html" target="_blank">点击查看</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+            <div class="experience section">
+                <h2>工作经历</h2>
+                <div class="detail">
+                    <div class="left pill">07/2020 - 09/2021</div>
+                    <div class="more">
+                        <h3><strong>深圳易佰网络科技有限公司</strong></h3>
+                        <ul>
+                            <li>独立运营和管理亚马逊日本站店铺。</li>
+                            <li>制定销售计划，确认优化方向，和仓库确认海外货运流程。</li>
+                            <li>多次作为优秀运营进行小组和部门内部经验分享</li>
+                        </ul>
+                    </div>
+                    <div class="left pill">11/2022 - 2/2022</div>
+                    <div class="more">
+                        <h3><strong>武汉堃亦科技有限公司</strong></h3>
+                        <ul>
+                            <li>独立运营和管理亚马逊日本站店铺。</li>
+                            <li>调整运营方向，对公司内部后台提出优化建议，促进工作效率的提高。</li>
+                            <li>结合市场数据，针对市场开发潜力产品。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        <div class="education section">
+            <h2>教育经历</h2>
+            <div class="item">
+                <div class="left pill">09/2016 - 07/2020</div>
+                <div class="more">
+                    <h3><strong>三峡大学</strong></h3>
+                    <ul>
+                        <li>证书：英语四六级、计算机二级、日语专业四级和N1</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="about-me section">
+                <h2>个人评价</h2>
+                <p>性格开朗，为人细心，做事一丝不苟，能吃苦耐劳，工作脚踏实地，乐于进取乐于奉献，善于处理人际关系，具有极佳的团队合作精神，又具有较强的独立工作能力，思维活跃，喜欢学习新技术，具有强烈的事业心和工作责任心。</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
